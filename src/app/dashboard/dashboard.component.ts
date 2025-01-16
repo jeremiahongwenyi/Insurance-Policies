@@ -68,7 +68,7 @@ export class DashboardComponent implements OnInit{
     next:(resp)=>{
       console.log(resp)
       this.fetchAllPolicies();
-      this.successMessage= 'Successful'
+      this.successMessage= 'Policy Added Successfully'
       this.displayMessage=this.successMessage;
       this.timeout()
     },
@@ -80,7 +80,7 @@ export class DashboardComponent implements OnInit{
         next:(resp)=>{
             console.log(resp);
             this.fetchAllPolicies();
-            this.successMessage= 'Successful'
+            this.successMessage= 'Policy Updated Successfully'
             this.displayMessage=this.successMessage
             this.timeout()
         },
@@ -138,6 +138,8 @@ export class DashboardComponent implements OnInit{
       next:(res)=>{
       console.log(res);
       this.fetchAllPolicies()
+      this.successMessage= 'Policy deleted Successfully'
+            this.displayMessage=this.successMessage
 
       },
       error: (err) => {
