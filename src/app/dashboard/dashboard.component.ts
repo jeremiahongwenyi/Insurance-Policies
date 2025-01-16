@@ -128,6 +128,8 @@ export class DashboardComponent implements OnInit{
   timeout(){
     setTimeout(() => {
       this.displayMessage = null;
+      this.successMessage=null;
+      this.errorMessage=null;
     }, 3000);
   }
 

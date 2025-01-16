@@ -55,7 +55,7 @@ export class CreateTaskComponent {
     console.log(form)
     if(form.status==="VALID"){
       this.EmitTaskData.emit(form.value);
-      this.OnCloseForm()
+      this.CloseForm.emit(false);
     }
     else {
       this.formValidationErrormessage.emit('Please fill all fields')
